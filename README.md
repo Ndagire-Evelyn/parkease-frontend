@@ -1,12 +1,20 @@
 ParkEase Frontend
+
 #Project Description
 This is a Parking management system that helps in rrunning parking actvities smoothly forexample registerng vehicles and more.
+
 #pages
-Login page; login admins and attendants and redirect them to the reports and dashboard pages respectively.
-Dashboard page; shows the user logged in and destributes parking activities and directs the user for regigtraction or signout.
-Registration form; Gives acces to the user to register the vehicle brought in.
-Signout page; caltulates the attendants' parking fees.
-Report page; shows daily reports for the admin.
+
+-Login page; login admins and attendants and redirect them to the reports and dashboard pages respectively.
+
+-Dashboard page; shows the user logged in and destributes parking activities and directs the user for regigtraction or signout.
+
+-Registration form; Gives acces to the user to register the vehicle brought in.
+
+-Signout page; caltulates the attendants' parking fees.
+
+-Report page; shows daily reports for the admin.
+
 ## How to Run
 
 1. Clone the repo: `git clone https://github.com/your-username/parkease-
@@ -23,10 +31,18 @@ frontend`
 - [x] Admin Reports page with table filtering
 
 ## Validation Rules Applied
-List the validation rules you implemented.
+
++256 formant for phone numbers
+
+CMxxxxxxxxx for the NIN
+
+UBM 123W for plate number
+
+Name must start with capital letters, no digits, minimum 2 charaters.
+
 
 ## Known Issues / Assumptions
-List anything that isn't working, or assumptions you made.
+Some js isn't working
 
 ## Author
 Ndagire Evelyn— Refactory CSE 2026
