@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>ParkEase - Sign-out</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen" id="signout">
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 md:px-10 py-3">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">local_parking</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight hidden sm:block">ParkEase</h1>
+</div>
+<div class="flex-1 max-w-2xl flex gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm" placeholder="Search Receipt by ID or Plate Number" type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold text-sm transition-colors">
+                    Search
+                </button>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs border border-primary/30">
+                    AD
+                </div>
+</div>
+</div>
+
+</header>
+<main class="max-w-7xl mx-auto p-4 md:p-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Details & Form -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Vehicle & Arrival Details Card -->
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<h2 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+                            Vehicle &amp; Arrival Details
+                        </h2>
+<span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold rounded-full border border-amber-200 dark:border-amber-800">
+                            PENDING SIGN-OUT
+                        </span>
+</div>
+<div class="p-6">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="w-full md:w-48 h-32 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-slate-700" data-alt="Close up of a silver sedan parked in a garage" id="close-up">
+</div>
+<div class="flex-1 space-y-3">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-xs text-slate-500 uppercase font-semibold">Driver Name</p>
+<p class="font-medium">Ndagire Evelyn</p>
+</div>
+<div>
+<p class="text-xs text-slate-500 uppercase font-semibold">Vehicle Type</p>
+<p class="font-medium">Sedan (UAW 452X)</p>
+</div>
+<div>
+<p class="text-xs text-slate-500 uppercase font-semibold">Arrival Time</p>
+<p class="font-medium">08:30 AM</p>
+</div>
+<div>
+<p class="text-xs text-slate-500 uppercase font-semibold">Duration</p>
+<p class="font-medium">4h 20m</p>
+</div>
+</div>
+<div class="mt-4 p-4 bg-primary/10 border border-primary/20 rounded-lg flex items-center justify-between">
+<span class="text-primary font-bold">Calculated Parking Fee</span>
+<span class="text-2xl font-black text-primary">UGX 15,000</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Receiver Information Form -->
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="p-4 border-b border-slate-100 dark:border-slate-800">
+<h2 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+                            Receiver Information
+                        </h2>
+</div>
+<form class="p-6 space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Receiver Full Name</label>
+<input class="w-full p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary" placeholder="Enter full name" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Phone Number</label>
+<input class="w-full p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary" placeholder="+256..." type="tel"/>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">NIN Number</label>
+<input class="w-full p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary" placeholder="CM000000000000" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Gender</label>
+<select class="w-full p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary">
+<option>Select Gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+</form>
+</section>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">check_circle</span>
+                        Confirm Payment &amp; Sign-out
+                    </button>
+<button class="px-8 py-3 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold rounded-lg hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+                        Cancel
+                    </button>
+</div>
+</div>
+<!-- Right Column: Receipt Preview -->
+<div class="lg:col-span-5">
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 sticky top-24">
+<div class="p-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<h2 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+                            Receipt Preview
+                        </h2>
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg flex items-center gap-1 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">print</span>
+                            Print
+                        </button>
+</div>
+<div class="p-8">
+<div class="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200">
+<div class="text-center mb-6">
+<h3 class="font-black text-xl tracking-tighter uppercase">ParkEase Exit Pass</h3>
+<p class="text-xs text-slate-500">Kempinski Parking Lot - Exit A</p>
+</div>
+<div class="space-y-3 text-sm">
+<div class="flex justify-between">
+<span class="text-slate-500">Receipt No:</span>
+<span class="font-mono font-bold">#PK-99201-X</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500">Date:</span>
+<span class="font-semibold">Oct 24, 2023 | 12:50 PM</span>
+</div>
+<hr class="border-slate-200 dark:border-slate-700"/>
+<div class="flex justify-between">
+<span class="text-slate-500">Plate No:</span>
+<span class="font-bold">UAW 452X</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500">Category:</span>
+<span class="font-semibold">Private Sedan</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500">Check-in:</span>
+<span class="font-semibold">08:30 AM</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500">Duration:</span>
+<span class="font-semibold">4h 20m</span>
+</div>
+<hr class="border-slate-200 dark:border-slate-700"/>
+<div class="flex justify-between text-lg font-black">
+<span>Total (UGX):</span>
+<span>15,000</span>
+</div>
+<hr class="border-slate-200 dark:border-slate-700"/>
+<div class="pt-2">
+<p class="text-xs text-slate-500 mb-1">Receiver Details:</p>
+<div class="bg-white dark:bg-slate-900 p-3 rounded border border-slate-200 dark:border-slate-700 italic text-slate-400">
+                                        Enter receiver info to populate...
+                                    </div>
+</div>
+</div>
+<div class="mt-8 flex flex-col items-center gap-3">
+<div class="w-32 h-32 bg-white p-2 border border-slate-200 rounded flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-slate-100 flex items-center justify-center text-slate-300 relative">
+<span class="material-symbols-outlined scale-[3]">qr_code_2</span>
+<span class="absolute bottom-1 text-[8px] font-bold text-slate-400 uppercase tracking-widest">Scan to Verify</span>
+</div>
+</div>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Thank you for using ParkEase</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-6 right-6 pointer-events-none">
+<div class="hidden transform translate-y-2 opacity-0 transition-all bg-emerald-500 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-bold">Payment Confirmed Successfully!</span>
+</div>
+</div>
+<script src="signout.js"></script>
+</body></html>
