@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://cdn.bootcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+<title>ParkEase - Registration</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">local_parking</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">ParkEase</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium leading-normal" href="dashboard.html">Dashboard</a>
+<a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary py-1" href="register.html">Registration</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">History</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all">
+<span class="truncate">Quick Reg</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar of a male supervisor" id="profile" ></div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 md:px-10">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-wrap justify-between gap-3 mb-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-slate-900 dark:text-white tracking-tight text-3xl font-bold leading-tight">Vehicle Registration</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">Complete the form below to register a new entry in the parking system.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<section class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-2 mb-6 border-b border-slate-100 dark:border-slate-800 pb-3">
+<span class="material-symbols-outlined text-primary">person</span>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold">Driver Information</h2>
+</div>
+<div class="space-y-4">
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Driver Name</span>
+<input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 h-12 placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary px-4 text-base font-normal" placeholder="Enter full name" type="text"/>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Phone Number</span>
+<div class="flex items-stretch rounded-lg overflow-hidden border border-slate-300 dark:border-slate-700">
+<div class="bg-slate-100 dark:bg-slate-800 px-4 flex items-center border-r border-slate-300 dark:border-slate-700 text-slate-500 font-medium">
+                                            +256
+                                        </div>
+<input class="form-input flex-1 border-none bg-white dark:bg-slate-800 h-12 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:ring-0 px-4 text-base" placeholder="700 000 000" type="tel"/>
+</div>
+</label>
+<div class="p-4 rounded-lg bg-primary/5 border border-primary/20">
+<label class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">NIN Number (National ID)</span>
+<span class="text-[10px] uppercase font-bold text-primary tracking-wider">Required for Boda-boda</span>
+</div>
+<div class="relative">
+<input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border-primary/30 bg-white dark:bg-slate-800 h-12 placeholder:text-slate-400 focus:ring-2 focus:ring-primary/40 focus:border-primary px-4 pl-10 text-base font-normal" placeholder="CFXXXXXXXXXXXXX" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-primary text-xl">badge</span>
+</div>
+</label>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-2 mb-6 border-b border-slate-100 dark:border-slate-800 pb-3">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold">Vehicle Information</h2>
+</div>
+<div class="space-y-4">
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Vehicle Type</span>
+<select class="form-select flex w-full rounded-lg text-slate-900 dark:text-slate-100 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 h-12 focus:ring-2 focus:ring-primary/20 focus:border-primary px-4 text-base">
+<option value="truck">Truck</option>
+<option value="personal">Personal Car</option>
+<option value="taxi">Taxi</option>
+<option value="coaster">Coaster</option>
+<option selected="" value="boda">Boda-boda</option>
+</select>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Number Plate</span>
+<div class="relative">
+<input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 h-12 placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary px-4 pl-10 text-base font-bold tracking-widest uppercase" placeholder="UBA 123X" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-slate-400 text-xl">tag</span>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Vehicle Model &amp; Color</span>
+<input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 h-12 placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary px-4 text-base" placeholder="e.g. Toyota Hiace, White" type="text"/>
+</label>
+</div>
+</section>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-end gap-4 mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
+<a href="register.html">
+    <button class="w-full md:w-auto flex items-center justify-center gap-2 min-w-[160px] cursor-pointer rounded-lg h-12 px-6 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined text-sm">backspace</span>
+                            Clear Form
+                        </button>
+</a>
+<a href="signout.html">
+<button class="w-full md:w-auto flex items-center justify-center gap-2 min-w-[200px] cursor-pointer rounded-lg h-12 px-6 bg-primary text-white text-sm font-bold hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all">
+<span class="material-symbols-outlined text-sm">print</span>
+                            Register &amp; Print Receipt
+                        </button>
+</a>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-10 py-4">
+<div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 dark:text-slate-400 gap-4">
+<div class="flex gap-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">settings</span> System Version: v1.2.0</span>
+</div>
+<div class="flex gap-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> Session Started: 08:00 AM</span>
+</div>
+</div>
+</footer>
+</div>
+<div class="fixed bottom-6 right-6 z-50 animate-bounce-subtle">
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-xl shadow-2xl w-64">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-lg">lightbulb</span>
+<h3 class="font-bold text-sm text-slate-900 dark:text-white">Quick Tips</h3>
+</div>
+<ul class="space-y-2">
+<li class="flex justify-between items-center text-xs">
+<span class="text-slate-500 dark:text-slate-400">Save &amp; Print</span>
+<kbd class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded border border-slate-300 dark:border-slate-600 font-sans text-slate-700 dark:text-slate-200">Ctrl + S</kbd>
+</li>
+<li class="flex justify-between items-center text-xs">
+<span class="text-slate-500 dark:text-slate-400">Clear Form</span>
+<kbd class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded border border-slate-300 dark:border-slate-600 font-sans text-slate-700 dark:text-slate-200">Alt + C</kbd>
+</li>
+<li class="flex justify-between items-center text-xs">
+<span class="text-slate-500 dark:text-slate-400">Quick Receipt</span>
+<kbd class="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded border border-slate-300 dark:border-slate-600 font-sans text-slate-700 dark:text-slate-200">Ctrl + P</kbd>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script src="register.js"></script>
+<script src="validation.js"></script>
+</body></html>
