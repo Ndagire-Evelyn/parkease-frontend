@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ParkEase - Daily Reports Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="reports.js" defer></script>
+<script src="validation.js" defer></script>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">local_parking</span>
+
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="dashboard.html">Dashboard</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary py-1" href="Reports.html">Reports</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-xs font-bold leading-normal tracking-wide hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-sm mr-1">picture_as_pdf</span>
+<span class="truncate">Download PDF</span>
+</button>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-bold leading-normal tracking-wide hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined text-sm mr-1">csv</span>
+<span class="truncate">Export CSV</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border-2 border-primary/20" data-alt="User profile avatar of a professional administrator" id="reports"></div>
+</div>
+</div>
+
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">ParkEase</h2>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Admin Panel</span>
+</div>
+
+</header>
+<main class="flex flex-1 justify-center py-6 px-4 md:px-10">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1 gap-6">
+<div class="flex flex-wrap items-end justify-between gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-black leading-tight tracking-tight uppercase">DAILY REPORTS</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Parking Management System Performance Overview</p>
+</div>
+</div>
+<section class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Revenue Overview</h2>
+<div class="flex items-center bg-slate-50 dark:bg-slate-800 p-1 rounded-lg border border-slate-200 dark:border-slate-700">
+<button class="p-2 hover:bg-white dark:hover:bg-slate-700 rounded-md transition-all text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="px-4 text-sm font-bold text-slate-700 dark:text-slate-200">Wednesday, Oct 25, 2023</div>
+<button class="p-2 hover:bg-white dark:hover:bg-slate-700 rounded-md transition-all text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Parking Revenue</p>
+<span class="material-symbols-outlined text-primary">local_parking</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-black tracking-tight">UGX 350,000</p>
+<div class="flex items-center gap-1 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+5% vs yesterday</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Tyre Clinic</p>
+<span class="material-symbols-outlined text-primary">tire_repair</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-black tracking-tight">UGX 80,000</p>
+<div class="flex items-center gap-1 text-rose-600 dark:text-rose-400 text-xs font-bold">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<span>-2% vs yesterday</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Battery Hire</p>
+<span class="material-symbols-outlined text-primary">battery_charging_full</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-black tracking-tight">UGX 20,000</p>
+<div class="flex items-center gap-1 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+1% vs yesterday</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Signed-out Vehicles</h2>
+<div class="relative w-full md:w-72">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/50 transition-all text-slate-700 dark:text-slate-200" placeholder="Search plate or receipt..." type="text"/>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800">
+<tr>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Receipt #</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Plate #</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">In-Time</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Out-Time</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Duration</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Fee</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono text-slate-600 dark:text-slate-400">#PX-9021</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100">UAW 452G</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">08:15 AM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">02:30 PM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">6h 15m</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100 text-right">UGX 15,000</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono text-slate-600 dark:text-slate-400">#PX-9022</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100">UBH 112L</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">09:00 AM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">11:45 AM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">2h 45m</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100 text-right">UGX 8,000</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono text-slate-600 dark:text-slate-400">#PX-9023</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100">UBA 990X</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">10:20 AM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">04:10 PM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">5h 50m</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100 text-right">UGX 12,000</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono text-slate-600 dark:text-slate-400">#PX-9024</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100">UBE 331K</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">07:45 AM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">05:00 PM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">9h 15m</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100 text-right">UGX 25,000</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-sm font-mono text-slate-600 dark:text-slate-400">#PX-9025</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100">UAY 772Q</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">11:30 AM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">01:00 PM</td>
+<td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">1h 30m</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-900 dark:text-slate-100 text-right">UGX 5,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-6 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-2">
+<span class="text-slate-900 dark:text-slate-100 text-xl font-black">Daily Grand Total:</span>
+<span class="bg-primary/10 text-primary px-4 py-1.5 rounded-lg text-xl font-black">UGX 450,000</span>
+</div>
+<nav class="flex items-center gap-1">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-30">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-medium">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</section>
+</div>
+</main>
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-10 py-8 text-center md:text-left">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-slate-100 text-sm font-black tracking-widest uppercase">ADMIN CONTROL PANEL</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium tracking-tight">© 2023 ParkEase Intelligent Solutions. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="evelynndagire423@gmail.com"><span class="material-symbols-outlined">security</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="evelynndagire423@gmail.com"><span class="material-symbols-outlined">help</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="evelynndagire423@gmail.com"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
